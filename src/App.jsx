@@ -11,8 +11,9 @@ import {
 	ManagementProducts,
 	ManagementReposts,
 	ManagementUser,
-	Success,
 } from './pages'
+import FailPage from './pages/authentication/FailPage'
+import SuccessPage from './pages/authentication/SuccessPage'
 import path from './utils/path'
 function App() {
 	return (
@@ -28,8 +29,8 @@ function App() {
 					</Route>
 				</Route>
 				<Route element={<Login />} path={path.LOGIN} />
-				<Route element={<Success />} path={path.SUCCESS} />
-				<Route element={<Fail />} path={path.FAIL} />
+				<Route element={<SuccessPage />} path={path.SUCCESS} />
+				<Route element={<FailPage />} path={path.FAIL} />
 			</Routes>
 			<ToastContainer
 				position='top-right'

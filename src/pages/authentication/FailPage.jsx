@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Fail = () => {
+const FailPage = () => {
 	return (
 		<div>
 			{/* Main modal */}
@@ -96,4 +96,4 @@ const Fail = () => {
 	)
 }
 
-export default Fail
+export default FailPage
