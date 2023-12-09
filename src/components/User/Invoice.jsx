@@ -1,5 +1,5 @@
 import pdfMake from 'pdfmake/build/pdfmake'
-import pdfFonts from 'pdfmake/build/vfs_fonts'
+import * as pdfFonts from 'pdfmake/build/vfs_fonts.js'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { apiUpdateProfile } from '../../apis'
