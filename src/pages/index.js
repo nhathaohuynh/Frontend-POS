@@ -1,5 +1,5 @@
 export { default as Fail } from './Authentication/Fail'
-export { default as Success } from './Authentication/Success'
+export { default as Success } from './Authentication/SuccessPage'
 export { default as Home } from './Home'
 export { default as Login } from './access/Login'
 // admin

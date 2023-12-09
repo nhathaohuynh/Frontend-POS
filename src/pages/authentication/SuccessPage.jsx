@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import path from '../../utils/path'
 
-const Success = () => {
+const SuccessPage = () => {
 	const navigate = useNavigate()
 	return (
 		<div>
@@ -43,4 +43,4 @@ const Success = () => {
 	)
 }
 
-export default Success
+export default SuccessPage
