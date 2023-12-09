@@ -15,13 +15,16 @@ export const apiGetProduct = async (pId) => {
 export const apiGetProductList = async (token, params) => {
 	console.log(params)
 	try {
-		const response = await axios(`http://localhost:8000/POS/api/v1/product`, {
-			headers: {
-				Authorization: `Bearer ${token}`,
+		const response = await axios(
+			`https://tdtu-pos.onrender.com/POS/api/v1/product`,
+			{
+				headers: {
+					Authorization: `Bearer ${token}`,
+				},
+				method: 'get',
+				params: params,
 			},
-			method: 'get',
-			params: params,
-		})
+		)
 		return response
 	} catch (err) {
 		checkResponseCode(err)

@@ -23,7 +23,7 @@ export const apiChangePassword = async (payload) => {
 export const apiGetCurrentEmployee = async (accessToken) => {
 	try {
 		const response = await axios(
-			'http://localhost:8000/POS/api/v1/access/current-employee',
+			'https://tdtu-pos.onrender.com/POS/api/v1/access/current-employee',
 			{
 				method: 'get',
 				headers: {

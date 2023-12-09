@@ -29,7 +29,7 @@ export const getProductsAction = createAsyncThunk(
 	async (data, { rejectWithValue }) => {
 		try {
 			const response = await axios.get(
-				`http://localhost:8000/POS/api/v1/product?page=${data.page}`,
+				`https://tdtu-pos.onrender.com/POS/api/v1/product?page=${data.page}`,
 				{
 					headers: {
 						Authorization: `Bearer ${data.accessToken}`,
