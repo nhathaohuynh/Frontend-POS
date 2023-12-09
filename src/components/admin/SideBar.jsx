@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/Logo.jpg'
 import { tabs } from '../../utils/constants'
 import { logout } from '../../utils/logout'
 import path from '../../utils/path'
