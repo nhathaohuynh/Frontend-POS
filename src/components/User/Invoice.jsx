@@ -1,5 +1,3 @@
-import pdfMake from 'pdfmake/build/pdfmake'
-import * as pdfFonts from 'pdfmake/build/vfs_fonts.js'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { apiUpdateProfile } from '../../apis'
@@ -13,7 +11,21 @@ import { toastError, toastSuccess } from '../../utils/toast'
 import Button from '../Share/Button'
 import Loading from '../Share/Loading'
 
-pdfMake.vfs = pdfFonts.pdfMake.vfs
+import * as pdfMake from 'pdfmake/build/pdfmake'
+
+// PDF Fonts
+const pdfFonts = {
+	// download default Roboto font from cdnjs.com
+	Roboto: {
+		normal:
+			'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/fonts/Roboto/Roboto-Regular.ttf',
+		bold: 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/fonts/Roboto/Roboto-Medium.ttf',
+		italics:
+			'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/fonts/Roboto/Roboto-Italic.ttf',
+		bolditalics:
+			'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/fonts/Roboto/Roboto-MediumItalic.ttf',
+	},
+}
 
 const Invoice = ({ setOpenInvoice }) => {
 	const dispatch = useDispatch()
@@ -80,7 +92,9 @@ const Invoice = ({ setOpenInvoice }) => {
 			},
 		}
 
-		pdfMake.createPdf(documentDefinition).download(`invoice_${orderId}.pdf`)
+		pdfMake
+			.createPdf(documentDefinition, null, pdfFonts)
+			.download(`invoice_${orderId}.pdf`)
 	}
 
 	// Function to handle form submission
