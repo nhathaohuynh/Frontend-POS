@@ -1,7 +1,7 @@
-export { default as Fail } from './Authentication/Fail'
 export { default as Success } from './Authentication/SuccessPage'
 export { default as Home } from './Home'
 export { default as Login } from './access/Login'
+export { default as Fail } from './authentication/FailPage'
 // admin
 export { default as Categories } from './admin/Categories'
 export { default as LayoutAdmin } from './admin/LayoutAdmin'
